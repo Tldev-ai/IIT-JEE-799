@@ -198,8 +198,10 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 ["Mechanics Derivation","Optics Diagram","Formula Sheet","Electrostatics","Solved Numericals"].forEach((cap,i)=>{
                     const d=document.createElement("div");
                     d.className="min-w-[80%] md:min-w-[40%] snap-center rounded-xl overflow-hidden border border-border bg-card relative";
+            
                     d.innerHTML=`<img src="p${i+1}.jpg" class="w-full h-[600px] object-contain bg-card" alt="Physics ${i+1}"><div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/80 text-white px-4 py-1.5 text-xs font-semibold rounded-lg">${cap} · Page ${i+1} of 750</div>`;
                     phyC.appendChild(d);
+                    
                 });
                 </script>
 

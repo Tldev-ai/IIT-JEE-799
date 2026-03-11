@@ -419,7 +419,7 @@ const mathC=document.getElementById("math-slides");
                 <!-- Price -->
                 <div class="flex justify-center items-baseline gap-3 mb-4">
                     <span class="text-gray-600 line-through text-xl">₹2,499</span>
-                    <span class="text-5xl font-display font-extrabold text-fire price-glow">₹799</span>
+                    <span id="price" class="text-5xl font-display font-extrabold text-fire price-glow">₹799</span>
                 </div>
 
                 <!-- Timer -->
@@ -594,14 +594,7 @@ const mathC=document.getElementById("math-slides");
     }, 1000);
 
     // ========== OFFER TIMER (till Sunday midnight) ==========
-    setInterval(() => {
-        const now = new Date();
-        const sun = (7-now.getDay())%7||7;
-        const target = new Date(now); target.setDate(now.getDate()+sun); target.setHours(23,59,59,999);
-        const diff = target-now;
-        const dd=Math.floor(diff/(1000*60*60*24)), hh=Math.floor((diff/(1000*60*60))%24), mm=Math.floor((diff/(1000*60))%60), ss=Math.floor((diff/1000)%60);
-        document.getElementById("offer-timer").textContent = dd>0 ? `${dd}d ${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}` : `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
-    }, 1000);
+   
 
     // ========== TAB SWITCHER ==========
     function switchTab(s) {
@@ -642,6 +635,34 @@ const mathC=document.getElementById("math-slides");
         }
         setTimeout(()=>{show();setInterval(show,15000+Math.random()*10000)},8000);
     })();
+        // ===== 2 HOUR OFFER TIMER =====
+
+let duration = 2 * 60 * 60; // 2 hours
+
+const timer = document.getElementById("offer-timer");
+const price = document.getElementById("price");
+
+const countdown = setInterval(function(){
+
+let hours = Math.floor(duration / 3600);
+let minutes = Math.floor((duration % 3600) / 60);
+let seconds = duration % 60;
+
+hours = hours.toString().padStart(2,"0");
+minutes = minutes.toString().padStart(2,"0");
+seconds = seconds.toString().padStart(2,"0");
+
+timer.innerHTML = `${hours}:${minutes}:${seconds}`;
+
+if(duration <= 0){
+clearInterval(countdown);
+timer.innerHTML = "Offer Expired";
+price.innerHTML = "₹1299";
+}
+
+duration--;
+
+},1000);
     </script>
 </body>
 </html>

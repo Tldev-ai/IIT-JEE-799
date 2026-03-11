@@ -193,7 +193,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             </div>
 
             <div class="relative min-h-[400px] md:min-h-[500px]">
-                <div id="phy-slides" class="flex gap-4 overflow-x-auto snap-x hide-scrollbar pb-8 px-2"></div>
+                <div id="chem-slides" class="hidden flex gap-4 overflow-x-scroll snap-x hide-scrollbar pb-8 px-2 touch-pan-x"></div>
                 <script>
                 const phyC=document.getElementById("phy-slides");
                 ["Mechanics Derivation","Optics Diagram","Formula Sheet","Electrostatics","Solved Numericals"].forEach((cap,i)=>{
@@ -215,7 +215,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 });
                 </script>
 
-                <div id="math-slides" class="hidden flex gap-4 overflow-x-auto snap-x hide-scrollbar pb-8 px-2"></div>
+                <div id="math-slides" class="hidden flex gap-4 overflow-x-scroll snap-x hide-scrollbar pb-8 px-2 touch-pan-x"></div>
                 <script>
                 const mathC=document.getElementById("math-slides");
                 ["Calculus Shortcuts","Coordinate Geometry","PYQ Solutions","Algebra Tricks","Vector Methods"].forEach((cap,i)=>{

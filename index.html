@@ -385,7 +385,7 @@ const mathC=document.getElementById("math-slides");
     </section>
 
     <!-- ========== PRICING WITH CHECKBOX UPSELL ========== -->
-    <section id="pricing" class="py-20 px-4 relative">
+   <section id="pricing" class="py-20 px-4 relative">
         <div class="max-w-md mx-auto bg-card rounded-2xl border border-fire/25 overflow-hidden relative z-10 glow-sm">
 
             <div class="bg-fire/10 border-b border-fire/20 text-fire text-center py-2 text-sm font-semibold">
@@ -407,27 +407,10 @@ const mathC=document.getElementById("math-slides");
                     <p class="flex items-center gap-2"><span class="text-fire font-bold">✓</span> Predicted Question Paper 2026 <span class="text-fire font-bold text-xs">FREE</span></p>
                 </div>
 
-                <!-- Price display -->
+                <!-- Price -->
                 <div class="flex justify-center items-baseline gap-3 mb-4">
                     <span class="text-gray-600 line-through text-xl">₹2,499</span>
-                    <span class="text-5xl font-display font-extrabold text-fire price-glow" id="display-price">₹799</span>
-                </div>
-
-                <!-- ========== CHECKBOX UPSELL ========== -->
-                <div id="upsell-box" class="mb-6 text-left bg-surface border-2 border-border rounded-xl p-4 cursor-pointer transition hover:border-fire/50" onclick="document.getElementById('upsell-check').click()">
-                    <label class="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" id="upsell-check" class="mt-1 w-5 h-5 accent-[#D4A043] rounded flex-shrink-0 cursor-pointer" onchange="toggleUpsell()">
-                        <div>
-                            <p class="text-white font-bold text-sm">Add Complete Revision Kit — <span class="text-fire">just +₹199</span></p>
-                            <div class="mt-2 space-y-1.5 text-xs text-gray-400">
-                                <p class="flex items-center gap-2">✓ 20-Day Revision Schedule (day-by-day plan)</p>
-                                <p class="flex items-center gap-2">✓ 10 Chapter-wise Self-Tests with answer keys</p>
-                                <p class="flex items-center gap-2">✓ 25+ Concept Revision Videos by IIT faculty</p>
-                                <p class="flex items-center gap-2">✓ Printable Formula Flashcards (all 3 subjects)</p>
-                            </div>
-                            <p class="mt-2 text-xs text-fire font-medium">87% of students add this</p>
-                        </div>
-                    </label>
+                    <span class="text-5xl font-display font-extrabold text-fire price-glow">₹799</span>
                 </div>
 
                 <!-- Timer -->
@@ -436,11 +419,11 @@ const mathC=document.getElementById("math-slides");
                     <p id="offer-timer" class="text-xl font-mono font-bold text-fire">00:00:00</p>
                 </div>
 
-                <!-- PAYMENT BUTTON — switches between ₹799 and ₹998 links -->
-                <!-- REPLACE these URLs with your actual Cashfree form links -->
-                <a id="pay-btn" href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="flex items-center justify-center gap-2 w-full bg-fire hover:bg-fireLight text-black text-xl font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
-                    <span id="btn-text">GET INSTANT ACCESS — ₹799</span>
+                <!-- PAYMENT BUTTON — REPLACE with your ₹799 Cashfree form -->
+                <a href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="flex items-center justify-center gap-2 w-full bg-fire hover:bg-fireLight text-black text-xl font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                    GET INSTANT ACCESS
                 </a>
+                <p class="mt-2 text-xs text-gray-500">📥 PDF link sent to email in 10 seconds.</p>
 
                 <!-- Trust lines -->
                 <div class="mt-4 space-y-1.5 text-xs text-gray-500 bg-surface p-3 rounded-xl border border-border">
@@ -451,7 +434,6 @@ const mathC=document.getElementById("math-slides");
             </div>
         </div>
     </section>
-
     <!-- ========== SYLLABUS (below pricing — for deep scrollers) ========== -->
     <section class="py-16 px-4 border-y border-border">
         <div class="max-w-6xl mx-auto">

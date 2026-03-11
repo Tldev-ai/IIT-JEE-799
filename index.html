@@ -611,8 +611,14 @@ const mathC=document.getElementById("math-slides");
     }
 
     // ========== HERO SLIDER ==========
-    let cs=0; const sl=document.getElementById('hero-slider');
-    setInterval(()=>{ cs=(cs+1)%3; sl.style.transform=`translateX(-${cs*100}%)`; }, 4000);
+   // HERO SLIDER MANUAL ONLY
+let cs = 0;
+const sl = document.getElementById('hero-slider');
+
+function nextSlide(){
+ cs=(cs+1)%3;
+ sl.style.transform=`translateX(-${cs*100}%)`;
+}
 
     // ========== AUTO-SWIPE TABS ==========
     

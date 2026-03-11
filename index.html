@@ -21,10 +21,10 @@
                         card2: '#1a1a1a',
                         border: '#262626',
                         muted: '#737373',
-                        fire: '#F97316',
-                        fireLight: '#FB923C',
-                        fireDark: '#EA580C',
-                        success: '#22C55E',
+                        fire: '#D4A043',
+                        fireLight: '#E2B565',
+                        fireDark: '#B8862D',
+                        success: '#4ADE80',
                     },
                     fontFamily: {
                         display: ['"Outfit"', 'sans-serif'],
@@ -39,10 +39,11 @@
         body { background: #0a0a0a; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .glow { box-shadow: 0 0 40px rgba(249,115,22,0.12); }
-        .glow-sm { box-shadow: 0 0 20px rgba(249,115,22,0.08); }
+        .glow { box-shadow: 0 0 25px rgba(212,160,67,0.04); }
+        .glow-sm { box-shadow: 0 0 12px rgba(212,160,67,0.04); }
         .snap-x { scroll-snap-type: x mandatory; }
         .snap-center { scroll-snap-align: center; }
+        .price-glow { text-shadow: 0 0 20px rgba(212,160,67,0.25); }
     </style>
 
 <!-- ========== TRACKING — REPLACE WITH YOUR OWN IDs ========== -->
@@ -77,15 +78,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <body class="text-white font-body antialiased pb-24">
 
     <!-- ========== TRUST TOP BAR ========== -->
-    <div class="fixed top-0 w-full z-50 bg-fire text-white text-center py-1.5 text-xs font-semibold tracking-wide">
-        🔥 Trusted by 5,100+ JEE Aspirants · Reviewed by IIT Alumni Faculty
+    <div class="fixed top-0 w-full z-50 bg-card/80 backdrop-blur-sm border-b border-border text-center py-1.5 text-xs font-medium tracking-wide text-gray-400">
+        Trusted by <span class="text-fire font-semibold">5,100+</span> JEE Aspirants · Reviewed by IIT Alumni Faculty
     </div>
 
     <!-- ========== NAV ========== -->
     <nav class="fixed top-7 w-full z-40 bg-surface/95 backdrop-blur-md border-b border-border">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="text-xl font-display font-bold text-white tracking-tight">JEE Toppers<span class="text-fire">Notes</span></div>
-            <a href="https://payments.cashfree.com/forms/iit-jee-pcm-799-notes" class="bg-fire text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-fireDark transition">
+            <a href="#pricing" class="bg-fire/90 text-black text-sm font-semibold px-5 py-2 rounded-lg hover:bg-fireLight transition">
                 Get Notes →
             </a>
         </div>
@@ -93,8 +94,8 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
     <!-- ========== HERO ========== -->
     <header class="pt-32 pb-14 px-4 relative overflow-hidden">
-        <div class="absolute top-20 right-10 w-72 h-72 bg-fire/8 rounded-full blur-3xl"></div>
-        <div class="absolute top-40 left-0 w-64 h-64 bg-orange-900/15 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-10 w-72 h-72 bg-fire/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 left-0 w-64 h-64 bg-amber-900/10 rounded-full blur-3xl"></div>
 
         <div class="max-w-4xl mx-auto text-center relative z-10">
 
@@ -109,15 +110,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
             <div class="flex items-center justify-center gap-3 mb-1">
                 <span class="text-gray-500 line-through text-xl">₹2,499</span>
-                <span class="text-fire text-5xl font-display font-extrabold">₹799</span>
+                <span class="text-fire text-5xl font-display font-extrabold price-glow">₹799</span>
             </div>
             <p class="text-sm text-gray-500 font-medium mb-6">That's just <span class="text-fire font-bold">₹0.29/page</span> — less than a photocopy</p>
 
             <!-- Subject breakdown -->
-            <div class="flex justify-center gap-2 md:gap-3 mb-8 text-xs font-bold">
-                <span class="bg-blue-950 text-blue-400 px-3 py-1.5 rounded-lg border border-blue-900/50">Physics · 750 pg</span>
-                <span class="bg-amber-950 text-amber-400 px-3 py-1.5 rounded-lg border border-amber-900/50">Chemistry · 1247 pg</span>
-                <span class="bg-emerald-950 text-emerald-400 px-3 py-1.5 rounded-lg border border-emerald-900/50">Maths · 726 pg</span>
+            <div class="flex justify-center gap-2 md:gap-3 mb-8 text-xs font-semibold">
+                <span class="bg-card2 text-gray-300 px-3 py-1.5 rounded-lg border border-border">Physics · 750 pg</span>
+                <span class="bg-card2 text-gray-300 px-3 py-1.5 rounded-lg border border-border">Chemistry · 1247 pg</span>
+                <span class="bg-card2 text-gray-300 px-3 py-1.5 rounded-lg border border-border">Maths · 726 pg</span>
             </div>
 
             <!-- JEE Countdown -->
@@ -146,8 +147,8 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             </div>
 
             <!-- Hero CTA -->
-            <a href="https://payments.cashfree.com/forms/iit-jee-pcm-799-notes" class="inline-flex items-center justify-center gap-2 bg-fire hover:bg-fireDark text-white text-xl font-bold py-4 px-12 rounded-xl shadow-xl shadow-fire/20 transform hover:scale-105 transition w-full md:w-auto glow">
-                GET INSTANT ACCESS →
+            <a href="#pricing" class="inline-flex items-center justify-center gap-2 bg-fire hover:bg-fireLight text-black text-xl font-bold py-4 px-12 rounded-xl shadow-lg transform hover:scale-[1.02] transition w-full md:w-auto">
+                GET INSTANT ACCESS
             </a>
             <p class="mt-3 text-sm text-gray-500">📥 PDF delivered to your email in 10 seconds · Lifetime access</p>
         </div>
@@ -198,10 +199,8 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 ["Mechanics Derivation","Optics Diagram","Formula Sheet","Electrostatics","Solved Numericals"].forEach((cap,i)=>{
                     const d=document.createElement("div");
                     d.className="min-w-[80%] md:min-w-[40%] snap-center rounded-xl overflow-hidden border border-border bg-card relative";
-            
                     d.innerHTML=`<img src="p${i+1}.jpg" class="w-full h-[600px] object-contain bg-card" alt="Physics ${i+1}"><div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/80 text-white px-4 py-1.5 text-xs font-semibold rounded-lg">${cap} · Page ${i+1} of 750</div>`;
                     phyC.appendChild(d);
-                    
                 });
                 </script>
 
@@ -231,8 +230,8 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
             <!-- Mid-page CTA -->
             <div class="text-center mt-8">
-                <a href="https://payments.cashfree.com/forms/iit-jee-pcm-799-notes" class="inline-flex items-center gap-2 bg-fire hover:bg-fireDark text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-fire/20 transition transform hover:scale-105">
-                    Get Instant Access →
+                <a href="#pricing" class="inline-flex items-center gap-2 bg-fire hover:bg-fireLight text-black font-bold px-8 py-3 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                    Get Instant Access
                 </a>
             </div>
         </div>
@@ -282,17 +281,17 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         <div class="max-w-3xl mx-auto">
             <h2 class="font-display text-2xl font-bold text-center mb-6">Stop Wasting Time On...</h2>
             <div class="space-y-3">
-                <div class="flex items-center gap-3 bg-red-950/30 border border-red-900/30 rounded-xl p-4">
-                    <span class="text-red-500">✕</span><p class="text-gray-300 text-sm">Hunting Telegram for incomplete, error-filled free notes</p>
+                <div class="flex items-center gap-3 bg-card border border-border rounded-xl p-4">
+                    <span class="text-red-400/70">✕</span><p class="text-gray-400 text-sm">Hunting Telegram for incomplete, error-filled free notes</p>
                 </div>
-                <div class="flex items-center gap-3 bg-red-950/30 border border-red-900/30 rounded-xl p-4">
-                    <span class="text-red-500">✕</span><p class="text-gray-300 text-sm">Printing hundreds of random pages from different sources</p>
+                <div class="flex items-center gap-3 bg-card border border-border rounded-xl p-4">
+                    <span class="text-red-400/70">✕</span><p class="text-gray-400 text-sm">Printing hundreds of random pages from different sources</p>
                 </div>
-                <div class="flex items-center gap-3 bg-red-950/30 border border-red-900/30 rounded-xl p-4">
-                    <span class="text-red-500">✕</span><p class="text-gray-300 text-sm">Jumping between YouTube channels for one chapter</p>
+                <div class="flex items-center gap-3 bg-card border border-border rounded-xl p-4">
+                    <span class="text-red-400/70">✕</span><p class="text-gray-400 text-sm">Jumping between YouTube channels for one chapter</p>
                 </div>
             </div>
-            <div class="mt-4 bg-fire/10 border border-fire/30 rounded-xl p-4 flex items-center gap-3">
+            <div class="mt-4 bg-fire/5 border border-fire/20 rounded-xl p-4 flex items-center gap-3">
                 <span class="text-fire text-lg">✓</span><p class="text-white text-sm font-semibold">One download. 2,700+ pages. Every chapter sorted. Done.</p>
             </div>
         </div>
@@ -371,10 +370,10 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
     <!-- ========== PRICING WITH CHECKBOX UPSELL ========== -->
     <section id="pricing" class="py-20 px-4 relative">
-        <div class="max-w-md mx-auto bg-card rounded-2xl border-2 border-fire/40 overflow-hidden relative z-10 glow">
+        <div class="max-w-md mx-auto bg-card rounded-2xl border border-fire/25 overflow-hidden relative z-10 glow-sm">
 
-            <div class="bg-fire text-white text-center py-2 text-sm font-bold">
-                <span class="w-2 h-2 bg-white rounded-full animate-pulse inline-block mr-1"></span>
+            <div class="bg-fire/10 border-b border-fire/20 text-fire text-center py-2 text-sm font-semibold">
+                <span class="w-1.5 h-1.5 bg-fire rounded-full animate-pulse inline-block mr-1"></span>
                 87 students joined in the last 24 hours
             </div>
 
@@ -395,13 +394,13 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 <!-- Price display -->
                 <div class="flex justify-center items-baseline gap-3 mb-4">
                     <span class="text-gray-600 line-through text-xl">₹2,499</span>
-                    <span class="text-5xl font-display font-extrabold text-fire" id="display-price">₹799</span>
+                    <span class="text-5xl font-display font-extrabold text-fire price-glow" id="display-price">₹799</span>
                 </div>
 
                 <!-- ========== CHECKBOX UPSELL ========== -->
                 <div id="upsell-box" class="mb-6 text-left bg-surface border-2 border-border rounded-xl p-4 cursor-pointer transition hover:border-fire/50" onclick="document.getElementById('upsell-check').click()">
                     <label class="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" id="upsell-check" class="mt-1 w-5 h-5 accent-[#F97316] rounded flex-shrink-0 cursor-pointer" onchange="toggleUpsell()">
+                        <input type="checkbox" id="upsell-check" class="mt-1 w-5 h-5 accent-[#D4A043] rounded flex-shrink-0 cursor-pointer" onchange="toggleUpsell()">
                         <div>
                             <p class="text-white font-bold text-sm">Add Complete Revision Kit — <span class="text-fire">just +₹199</span></p>
                             <div class="mt-2 space-y-1.5 text-xs text-gray-400">
@@ -410,7 +409,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                                 <p class="flex items-center gap-2">✓ 25+ Concept Revision Videos by IIT faculty</p>
                                 <p class="flex items-center gap-2">✓ Printable Formula Flashcards (all 3 subjects)</p>
                             </div>
-                            <p class="mt-2 text-xs text-fire font-semibold">🔥 87% of students add this</p>
+                            <p class="mt-2 text-xs text-fire font-medium">87% of students add this</p>
                         </div>
                     </label>
                 </div>
@@ -423,7 +422,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
                 <!-- PAYMENT BUTTON — switches between ₹799 and ₹998 links -->
                 <!-- REPLACE these URLs with your actual Cashfree form links -->
-                <a id="pay-btn" href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="flex items-center justify-center gap-2 w-full bg-fire hover:bg-fireDark text-white text-xl font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02] glow-sm">
+                <a id="pay-btn" href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="flex items-center justify-center gap-2 w-full bg-fire hover:bg-fireLight text-black text-xl font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
                     <span id="btn-text">GET INSTANT ACCESS — ₹799</span>
                 </a>
 
@@ -509,7 +508,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <section class="py-20 px-4 border-t border-border text-center">
         <h2 class="font-display text-3xl font-bold mb-4">Give your child the revision edge<br>5,100+ students already have.</h2>
         <p class="text-gray-500 mb-8 max-w-lg mx-auto">₹799 for 2,700+ pages of topper-quality notes. Reviewed by IIT faculty. Instant delivery.</p>
-        <a href="https://payments.cashfree.com/forms/iit-jee-pcm-799-notes" class="inline-block bg-fire text-white font-bold text-xl py-4 px-12 rounded-xl shadow-xl hover:bg-fireDark transition glow-sm">Get Instant Access →</a>
+        <a href="#pricing" class="inline-block bg-fire text-black font-bold text-xl py-4 px-12 rounded-xl shadow-lg hover:bg-fireLight transition">Get Instant Access</a>
         <p class="mt-4 text-sm text-gray-600">Lifetime access · Printable · Instant delivery</p>
     </section>
 
@@ -528,16 +527,16 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
     <!-- ========== STICKY BAR (mobile) — also updates with upsell ========== -->
     <div class="fixed bottom-0 left-0 w-full bg-surface border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.5)] z-50 md:hidden">
-        <div class="bg-success/10 text-center py-1 border-b border-success/20">
-            <p class="text-xs text-success font-semibold">✅ Not happy? Full refund within 24 hours</p>
+        <div class="bg-success/5 text-center py-1 border-b border-border">
+            <p class="text-xs text-success/80 font-medium">✅ Not happy? Full refund within 24 hours</p>
         </div>
         <div class="p-3 flex items-center justify-between">
             <div class="pl-2">
                 <p class="text-xs text-gray-500 line-through">₹2,499</p>
-                <p class="font-bold text-xl text-fire" id="sticky-price">₹799</p>
+                <p class="font-bold text-xl text-fire price-glow" id="sticky-price">₹799</p>
                 <p class="text-[10px] text-gray-500">₹0.29/page</p>
             </div>
-            <a id="sticky-btn" href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="bg-fire text-white font-bold py-3 px-5 rounded-xl shadow-lg hover:bg-fireDark transition animate-pulse flex items-center gap-1 text-sm">
+            <a id="sticky-btn" href="https://payments.cashfree.com/forms/YOUR-799-FORM" target="_blank" class="bg-fire text-black font-bold py-3 px-5 rounded-xl shadow-lg hover:bg-fireLight transition flex items-center gap-1 text-sm">
                 <span id="sticky-btn-text">GET ACCESS — ₹799</span>
             </a>
         </div>
@@ -626,7 +625,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             const t=document.createElement("div");
             t.style.cssText="position:fixed;bottom:80px;left:16px;z-index:9999;max-width:280px;transform:translateX(-120%);transition:transform 0.4s ease;";
             t.innerHTML=`<div style="background:#141414;border:1px solid #262626;border-radius:12px;padding:10px 14px;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:flex;align-items:center;gap:10px;">
-                <div style="background:#F97316;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✓</div>
+                <div style="background:#D4A043;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✓</div>
                 <div><p style="font-size:12px;font-weight:600;color:#fff;margin:0;">${b[i].n} from ${b[i].c}</p><p style="font-size:10px;color:#737373;margin:2px 0 0;">purchased · ${Math.floor(Math.random()*10)+1} min ago</p></div></div>`;
             document.body.appendChild(t);
             setTimeout(()=>{t.style.transform="translateX(0)"},100);
